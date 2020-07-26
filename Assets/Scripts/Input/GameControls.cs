@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/GameControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/InternalAssets/Input/GameControls.inputactions'
 
 using System;
 using System.Collections;
@@ -21,10 +21,18 @@ namespace Sail.Input
             ""id"": ""f018c7a6-0f3d-481d-9994-38b0ed95b5ac"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""Steering"",
                     ""type"": ""Value"",
                     ""id"": ""77483536-e03a-4524-840d-dcd1be0ec7b5"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""SailLevel"",
+                    ""type"": ""Value"",
+                    ""id"": ""85e8bfd6-e47b-4780-ac5c-14ef60b3abb2"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
@@ -39,136 +47,180 @@ namespace Sail.Input
             ],
             ""bindings"": [
                 {
+                    ""name"": """",
+                    ""id"": ""1973e503-8441-40c1-87f6-4a2558900265"",
+                    ""path"": ""<Gamepad>/leftStick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Steering"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""WASD"",
-                    ""id"": ""c4b9f627-e4fd-4bfa-b64e-a803b4000029"",
-                    ""path"": ""2DVector"",
+                    ""id"": ""ef2ad9c2-47b5-485e-a0e4-bceb74338c74"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Steering"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""623181af-d0de-4f6a-b5f0-e146c1e86ab8"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""2d0d5ad6-a182-42fe-bc52-6132a7d9696d"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""c52a999c-8348-4b16-9e21-f12c7542a670"",
+                    ""name"": ""negative"",
+                    ""id"": ""0fbc7ab4-5a9c-481b-8e07-b54303925c11"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Steering"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""right"",
-                    ""id"": ""741964b3-dd6b-4f30-bc20-3a61277bbcb4"",
+                    ""name"": ""positive"",
+                    ""id"": ""147fb263-3eaf-4e95-be03-07321f21fd98"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Steering"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""Arrows"",
-                    ""id"": ""3910980c-7dd2-4456-a73e-67fb9e6e95f1"",
-                    ""path"": ""2DVector"",
+                    ""id"": ""375e1989-de5d-494d-a78e-e7b94505e7b3"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Steering"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""63d1aee5-a47f-4a1a-b73a-ea773c39917d"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""6a18edc7-efb8-49bb-943b-2d5d309327d0"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""6fbe421e-2ee4-49ad-ab19-3297c07842b6"",
+                    ""name"": ""negative"",
+                    ""id"": ""ed807d96-82a8-4967-8460-de68d2cd72c8"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Steering"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""right"",
-                    ""id"": ""94642e46-04f7-46d0-b6c9-59fca51f75d6"",
+                    ""name"": ""positive"",
+                    ""id"": ""119d2c65-dd89-4e23-93c6-90c2b8677fa1"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Steering"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""e2e718b2-358a-4e04-8e71-62174a0bac33"",
-                    ""path"": ""<Gamepad>/leftStick"",
+                    ""name"": ""1D Axis"",
+                    ""id"": ""1f55b87d-aa4f-42c1-bdef-b272a7d7ada0"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
+                    ""groups"": """",
+                    ""action"": ""SailLevel"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""bb7b8157-cc28-45a7-a64d-03c398ef94f4"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""name"": ""negative"",
+                    ""id"": ""f594e047-c668-417c-b5a6-aebb7561c988"",
+                    ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Camera"",
+                    ""action"": ""SailLevel"",
                     ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""fab2c94b-f4a5-4020-a244-f44b948a9e73"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""SailLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""21d1be0f-f3a9-4da0-b97a-4950f09f8263"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SailLevel"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""3d517572-4c1e-4c0a-bc47-053576d4f32d"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse and keyboard"",
+                    ""action"": ""SailLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""4455c7cd-5242-4d60-8b23-2da7a406b78f"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse and keyboard"",
+                    ""action"": ""SailLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Arrows"",
+                    ""id"": ""2453122e-e511-42aa-b13e-cabc71dc203d"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SailLevel"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""dfdb78cc-5500-4b4f-88c4-92f0f7aa89bb"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse and keyboard"",
+                    ""action"": ""SailLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""f74f9247-f358-49c3-944a-d824f54da036"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse and keyboard"",
+                    ""action"": ""SailLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -177,6 +229,17 @@ namespace Sail.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse and keyboard"",
+                    ""action"": ""Camera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c4ee82db-fccc-4b67-b937-056df1c3f890"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Camera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -216,7 +279,8 @@ namespace Sail.Input
 }");
             // Boat
             m_Boat = asset.FindActionMap("Boat", throwIfNotFound: true);
-            m_Boat_Movement = m_Boat.FindAction("Movement", throwIfNotFound: true);
+            m_Boat_Steering = m_Boat.FindAction("Steering", throwIfNotFound: true);
+            m_Boat_SailLevel = m_Boat.FindAction("SailLevel", throwIfNotFound: true);
             m_Boat_Camera = m_Boat.FindAction("Camera", throwIfNotFound: true);
         }
 
@@ -267,13 +331,15 @@ namespace Sail.Input
         // Boat
         private readonly InputActionMap m_Boat;
         private IBoatActions m_BoatActionsCallbackInterface;
-        private readonly InputAction m_Boat_Movement;
+        private readonly InputAction m_Boat_Steering;
+        private readonly InputAction m_Boat_SailLevel;
         private readonly InputAction m_Boat_Camera;
         public struct BoatActions
         {
             private @GameControls m_Wrapper;
             public BoatActions(@GameControls wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Movement => m_Wrapper.m_Boat_Movement;
+            public InputAction @Steering => m_Wrapper.m_Boat_Steering;
+            public InputAction @SailLevel => m_Wrapper.m_Boat_SailLevel;
             public InputAction @Camera => m_Wrapper.m_Boat_Camera;
             public InputActionMap Get() { return m_Wrapper.m_Boat; }
             public void Enable() { Get().Enable(); }
@@ -284,9 +350,12 @@ namespace Sail.Input
             {
                 if (m_Wrapper.m_BoatActionsCallbackInterface != null)
                 {
-                    @Movement.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnMovement;
-                    @Movement.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnMovement;
-                    @Movement.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnMovement;
+                    @Steering.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnSteering;
+                    @Steering.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnSteering;
+                    @Steering.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnSteering;
+                    @SailLevel.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnSailLevel;
+                    @SailLevel.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnSailLevel;
+                    @SailLevel.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnSailLevel;
                     @Camera.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnCamera;
                     @Camera.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnCamera;
                     @Camera.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnCamera;
@@ -294,9 +363,12 @@ namespace Sail.Input
                 m_Wrapper.m_BoatActionsCallbackInterface = instance;
                 if (instance != null)
                 {
-                    @Movement.started += instance.OnMovement;
-                    @Movement.performed += instance.OnMovement;
-                    @Movement.canceled += instance.OnMovement;
+                    @Steering.started += instance.OnSteering;
+                    @Steering.performed += instance.OnSteering;
+                    @Steering.canceled += instance.OnSteering;
+                    @SailLevel.started += instance.OnSailLevel;
+                    @SailLevel.performed += instance.OnSailLevel;
+                    @SailLevel.canceled += instance.OnSailLevel;
                     @Camera.started += instance.OnCamera;
                     @Camera.performed += instance.OnCamera;
                     @Camera.canceled += instance.OnCamera;
@@ -324,7 +396,8 @@ namespace Sail.Input
         }
         public interface IBoatActions
         {
-            void OnMovement(InputAction.CallbackContext context);
+            void OnSteering(InputAction.CallbackContext context);
+            void OnSailLevel(InputAction.CallbackContext context);
             void OnCamera(InputAction.CallbackContext context);
         }
     }
