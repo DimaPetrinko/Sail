@@ -21,16 +21,24 @@ namespace Sail.Input
             ""id"": ""f018c7a6-0f3d-481d-9994-38b0ed95b5ac"",
             ""actions"": [
                 {
-                    ""name"": ""Steering"",
-                    ""type"": ""Value"",
+                    ""name"": ""Rudder"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""77483536-e03a-4524-840d-dcd1be0ec7b5"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""SailAngle"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""182b4f1a-f696-4875-a193-3bd255a1c5be"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""SailLevel"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""85e8bfd6-e47b-4780-ac5c-14ef60b3abb2"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
@@ -38,7 +46,7 @@ namespace Sail.Input
                 },
                 {
                     ""name"": ""Camera"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""baa9de6c-7366-4120-bb9b-c4d5eb70fdd1"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -53,7 +61,7 @@ namespace Sail.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Steering"",
+                    ""action"": ""Rudder"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -64,7 +72,7 @@ namespace Sail.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Steering"",
+                    ""action"": ""Rudder"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -75,7 +83,7 @@ namespace Sail.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Steering"",
+                    ""action"": ""Rudder"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -86,7 +94,7 @@ namespace Sail.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Steering"",
+                    ""action"": ""Rudder"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -97,7 +105,7 @@ namespace Sail.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Steering"",
+                    ""action"": ""Rudder"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -108,7 +116,7 @@ namespace Sail.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Steering"",
+                    ""action"": ""Rudder"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -119,12 +127,12 @@ namespace Sail.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse and keyboard"",
-                    ""action"": ""Steering"",
+                    ""action"": ""Rudder"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""1D Axis"",
+                    ""name"": ""DPad"",
                     ""id"": ""1f55b87d-aa4f-42c1-bdef-b272a7d7ada0"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
@@ -243,6 +251,72 @@ namespace Sail.Input
                     ""action"": ""Camera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""DPad"",
+                    ""id"": ""6d1bc994-5451-4e82-acb7-e862e8a5d5a3"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SailAngle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""c8d9a11c-8e62-49ac-9cc0-dcbc0d68c2a3"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""SailAngle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""9063c14b-23be-4c77-82e2-39528d3a0883"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""SailAngle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""EQ"",
+                    ""id"": ""74b9b708-e539-4483-b88d-6c4eb9417f46"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SailAngle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""721b6f32-2901-4002-85c8-e69c6930e25c"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse and keyboard"",
+                    ""action"": ""SailAngle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""9a3487e4-26ba-47fd-a277-6039f1084750"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse and keyboard"",
+                    ""action"": ""SailAngle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -279,7 +353,8 @@ namespace Sail.Input
 }");
             // Boat
             m_Boat = asset.FindActionMap("Boat", throwIfNotFound: true);
-            m_Boat_Steering = m_Boat.FindAction("Steering", throwIfNotFound: true);
+            m_Boat_Rudder = m_Boat.FindAction("Rudder", throwIfNotFound: true);
+            m_Boat_SailAngle = m_Boat.FindAction("SailAngle", throwIfNotFound: true);
             m_Boat_SailLevel = m_Boat.FindAction("SailLevel", throwIfNotFound: true);
             m_Boat_Camera = m_Boat.FindAction("Camera", throwIfNotFound: true);
         }
@@ -331,14 +406,16 @@ namespace Sail.Input
         // Boat
         private readonly InputActionMap m_Boat;
         private IBoatActions m_BoatActionsCallbackInterface;
-        private readonly InputAction m_Boat_Steering;
+        private readonly InputAction m_Boat_Rudder;
+        private readonly InputAction m_Boat_SailAngle;
         private readonly InputAction m_Boat_SailLevel;
         private readonly InputAction m_Boat_Camera;
         public struct BoatActions
         {
             private @GameControls m_Wrapper;
             public BoatActions(@GameControls wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Steering => m_Wrapper.m_Boat_Steering;
+            public InputAction @Rudder => m_Wrapper.m_Boat_Rudder;
+            public InputAction @SailAngle => m_Wrapper.m_Boat_SailAngle;
             public InputAction @SailLevel => m_Wrapper.m_Boat_SailLevel;
             public InputAction @Camera => m_Wrapper.m_Boat_Camera;
             public InputActionMap Get() { return m_Wrapper.m_Boat; }
@@ -350,9 +427,12 @@ namespace Sail.Input
             {
                 if (m_Wrapper.m_BoatActionsCallbackInterface != null)
                 {
-                    @Steering.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnSteering;
-                    @Steering.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnSteering;
-                    @Steering.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnSteering;
+                    @Rudder.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnRudder;
+                    @Rudder.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnRudder;
+                    @Rudder.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnRudder;
+                    @SailAngle.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnSailAngle;
+                    @SailAngle.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnSailAngle;
+                    @SailAngle.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnSailAngle;
                     @SailLevel.started -= m_Wrapper.m_BoatActionsCallbackInterface.OnSailLevel;
                     @SailLevel.performed -= m_Wrapper.m_BoatActionsCallbackInterface.OnSailLevel;
                     @SailLevel.canceled -= m_Wrapper.m_BoatActionsCallbackInterface.OnSailLevel;
@@ -363,9 +443,12 @@ namespace Sail.Input
                 m_Wrapper.m_BoatActionsCallbackInterface = instance;
                 if (instance != null)
                 {
-                    @Steering.started += instance.OnSteering;
-                    @Steering.performed += instance.OnSteering;
-                    @Steering.canceled += instance.OnSteering;
+                    @Rudder.started += instance.OnRudder;
+                    @Rudder.performed += instance.OnRudder;
+                    @Rudder.canceled += instance.OnRudder;
+                    @SailAngle.started += instance.OnSailAngle;
+                    @SailAngle.performed += instance.OnSailAngle;
+                    @SailAngle.canceled += instance.OnSailAngle;
                     @SailLevel.started += instance.OnSailLevel;
                     @SailLevel.performed += instance.OnSailLevel;
                     @SailLevel.canceled += instance.OnSailLevel;
@@ -396,7 +479,8 @@ namespace Sail.Input
         }
         public interface IBoatActions
         {
-            void OnSteering(InputAction.CallbackContext context);
+            void OnRudder(InputAction.CallbackContext context);
+            void OnSailAngle(InputAction.CallbackContext context);
             void OnSailLevel(InputAction.CallbackContext context);
             void OnCamera(InputAction.CallbackContext context);
         }
