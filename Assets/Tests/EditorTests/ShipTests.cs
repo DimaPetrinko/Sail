@@ -170,6 +170,17 @@ namespace Sail.Tests.EditorTests
 			}
 
 			[Test]
+			public void Hull_WithForceInOtherDirection_ResultsInInlineOutputVector()
+			{
+				mHull.Orientation = Quaternion.LookRotation(new Vector3(2, 0, 2), Vector3.up);
+				mHull.ApplyMastForce(new Vector3(3, 0, 1));
+
+				var expectedForceDirection = (mHull.Orientation * Vector3.forward).normalized;
+
+				Assert.AreEqual(expectedForceDirection, mHull.MovementDirection.normalized);
+			}
+
+			[Test]
 			public void Rudder_SetToLessThanNegativeOne_EqualsNegativeOne()
 			{
 				mHull.Rudder = -4f;

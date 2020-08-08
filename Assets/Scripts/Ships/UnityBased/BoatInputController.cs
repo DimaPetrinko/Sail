@@ -1,32 +1,31 @@
-using System;
 using Sail.Input;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Sail.Boat
+namespace Sail.Ships.UnityBased
 {
 	public delegate void InputActionDelegate(InputAction.CallbackContext context);
 	public delegate void InputAxisDelegate(float value);
 	public delegate void Input2DAxisDelegate(Vector2 value);
 
-	public class BoatInputController : IDisposable
+	public class BoatInputController : IInputController
 	{
 		private readonly GameControls mGameControls;
 
-		private readonly InputAxisDelegate mRudderDelegate;
-		private readonly InputAxisDelegate mSailAngleDelegate;
-		private readonly InputAxisDelegate mSailLevelDelegate;
-		private readonly Input2DAxisDelegate mCameraDelegate;
+		public InputAxisDelegate RudderDelegate { get; }
+		public InputAxisDelegate SailAngleDelegate { get; }
+		public InputAxisDelegate SailLevelDelegate { get; }
+		public Input2DAxisDelegate CameraDelegate { get; }
 
 		public BoatInputController(InputAxisDelegate rudderDelegate, InputAxisDelegate sailAngleDelegate,
 			InputAxisDelegate sailLevelDelegate, Input2DAxisDelegate cameraDelegate)
 		{
 			mGameControls = new GameControls();
 
-			mRudderDelegate = rudderDelegate;
-			mSailAngleDelegate = sailAngleDelegate;
-			mSailLevelDelegate = sailLevelDelegate;
-			mCameraDelegate = cameraDelegate;
+			RudderDelegate = rudderDelegate;
+			SailAngleDelegate = sailAngleDelegate;
+			SailLevelDelegate = sailLevelDelegate;
+			CameraDelegate = cameraDelegate;
 
 			if (mGameControls != null)
 			{
@@ -46,9 +45,9 @@ namespace Sail.Boat
 
 		public void Update()
 		{
-			mRudderDelegate(mGameControls.Boat.Rudder.ReadValue<float>());
-			mSailAngleDelegate(mGameControls.Boat.SailAngle.ReadValue<float>());
-			mSailLevelDelegate(mGameControls.Boat.SailLevel.ReadValue<float>());
+			RudderDelegate(mGameControls.Boat.Rudder.ReadValue<float>());
+			SailAngleDelegate(mGameControls.Boat.SailAngle.ReadValue<float>());
+			SailLevelDelegate(mGameControls.Boat.SailLevel.ReadValue<float>());
 		}
 
 		public void Dispose()
@@ -58,7 +57,7 @@ namespace Sail.Boat
 
 		private void OnCameraActionPerformed(InputAction.CallbackContext context)
 		{
-			mCameraDelegate?.Invoke(context.ReadValue<Vector2>());
+			CameraDelegate?.Invoke(context.ReadValue<Vector2>());
 		}
 	}
 }

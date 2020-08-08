@@ -10,11 +10,14 @@ namespace Sail.Ships
 
 		public Ship()
 		{
-			Orientation = Quaternion.identity;
+			Hull = new Hull();
+			Hull.Orientation = Quaternion.identity;
+
+			Orientation = Hull.Orientation;
+
 			Sail = new Sail();
 			Sail.MastOrientation = Orientation;
 
-			Hull = new Hull();
 		}
 	}
 }

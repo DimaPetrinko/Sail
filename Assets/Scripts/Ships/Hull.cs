@@ -18,16 +18,27 @@ namespace Sail.Ships
 			set => mSpeed = MathUtils.Max(0f, value);
 		}
 
-		public AnimationCurve mRotationOverSpeedCurve = new AnimationCurve(new Keyframe(0, 0),
-			new Keyframe(4, 1), new Keyframe(20, 0.1f));
-		private float mSpeed;
+		public Vector3 MovementDirection { get; private set; }
 
 		public Quaternion RotationDelta { get; private set; }
+
+		public Quaternion Orientation { get; set; }
+
+		private readonly AnimationCurve mRotationOverSpeedCurve = new AnimationCurve(
+			new Keyframe(0, 0),
+			new Keyframe(4, 1),
+			new Keyframe(20, 0.1f));
+		private float mSpeed;
 
 		private void UpdateRotationDelta()
 		{
 			var rotationRate = mRotationOverSpeedCurve.Evaluate(Speed);
 			// RotationDelta = ;
+		}
+
+		public void ApplyMastForce(Vector3 force)
+		{
+			
 		}
 	}
 }
